@@ -835,7 +835,7 @@ button.blue-btn {
     padding: 10px;
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,.09), 1px 3px 3px 0px rgba(0,0,0,.7);
     background: #FDFBF7;
-    min-height: 140px;
+    min-height: 110px;
     margin-bottom: 12px;
     margin-top: 12px;
     border-radius: 10px;
@@ -845,11 +845,11 @@ button.blue-btn {
     word-break: break-word;
     white-space: break-spaces;
 }
-.row.pipeline-process .col-md-2 {
+.row.pipeline-process .col-md-6 {
     border-right: 1px solid #dee2e6;
     padding-bottom: 15px;
 }
-.row.pipeline-process .col-md-2:nth-child(6){
+.row.pipeline-process .col-md-6:nth-child(2){
     border-right: none;
 }
 
@@ -940,8 +940,8 @@ button.won-btn {
     flex-direction: row;
     box-sizing: border-box;
     cursor: move;
-    width: 50%;
-    margin-left: 25%;
+    /* width: 50%;
+    margin-left: 25%; */
   }
   
   .cdk-drag-preview {

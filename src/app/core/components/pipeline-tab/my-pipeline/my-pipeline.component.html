@@ -22,9 +22,8 @@
               <div class="drag-item-box pipeline-card" *ngFor="let item of presales" cdkDrag (cdkDragStarted)="dragStarted($event)"
               >
               <div class="drag-item-box-inner">
-                <label>{{item.value}}</label>
-                
-                <button class="btn {{item.btn}}">App Design</button>
+                <label>{{item.value}}</label>                
+                <button class="btn {{item.btn}} pull-right">App Design</button>
                 <p class="company-value">value: ${{item.price}}</p>
                 <span class="last-action">Last Action: 24/08/2020 13:00 HRS</span>
             </div>
@@ -47,9 +46,8 @@
               <div class="drag-item-box pipeline-card" [class.pinkbox]="item.alert"  cdkDrag (cdkDragStarted)="dragStarted($event)"
               >
               <div class="drag-item-box-inner">
-                <label>{{item.value}}</label>
-                
-                <button class="btn {{item.btn}}">App Design</button>
+                <label>{{item.value}}</label>                
+                <button class="btn {{item.btn}} pull-right">App Design</button>
                 <p class="company-value">value: ${{item.price}}</p>
                 <span class="last-action">Last Action: 24/08/2020 13:00 HRS</span>
             </div>
