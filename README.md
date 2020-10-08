@@ -1,4 +1,4 @@
-# SSIL Etask
+# SSIL SFT CRM BA
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.28.
 
