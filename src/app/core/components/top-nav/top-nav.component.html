@@ -1,0 +1,11 @@
+<div class="fixed-top main-nav">
+    <ul class="top-nav">
+        <ng-container *ngFor="let nav of navList ; let i = index">
+            <li [ngClass]="{'active': nav.selected}" (click)="goto(nav)">
+                <a>
+                    <i [ngClass]="nav.icon" aria-hidden="true"></i> {{nav.title}}
+                </a>
+            </li>
+        </ng-container>
+    </ul>
+</div>

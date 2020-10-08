@@ -1,0 +1,32 @@
+<loading [state]="loading">
+    <div class="modal-content">
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h4 class="modal-title">Estimated Timeline</h4>
+      <button type="button" class="close" (click)="close(false)">×</button>
+    </div>
+    <!-- Modal body -->
+    <div class="modal-body">
+        <div class="modal-body-container">
+      <form [formGroup]="form">
+        <div class="row">       
+          <div class="col-sm-12 col-xs-12 text-center">
+            <div class="form-group">
+                <input class="form-control form-control2" formControlName="days" placeholder="Number of days" [ngClass]="displayFieldCss(form,'days')">                   
+                <div class="invalid-feedback" *ngIf="isFieldValid(form,'days')">Enter Estimated Timeline</div>
+            </div>
+          </div>
+          
+        </div>
+          
+        <div class="row">
+          <div class="col-sm-12 col-xs-12 text-center">
+            <button type="button" class="btn btn-primary modal-save-btn" (click)="submit()">SAVE</button>
+            <button type="button" class="btn btn-danger modal-cancel-btn" (click)="close(false)">CANCEL</button>
+          </div>
+        </div> 
+      </form>
+    </div>
+    </div>
+  </div>
+  </loading>

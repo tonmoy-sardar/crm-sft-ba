@@ -1,0 +1,67 @@
+<div class="tab-pipeline-body">
+    <div class="row pipeline-steps">
+        <div class="col-md-6 presales">
+            <label>Presales</label>
+            <p>Value: $2400000</p>
+        </div>
+        <div class="col-md-6 proposal">
+            <label>Proposal</label>
+            <p>Value: $2400000</p>
+        </div>
+    </div>
+    <div class="row pipeline-process">
+          <div class="col-md-6 p-01">
+            <div
+              id="presales"
+              class="drag-item-list"
+              cdkDropList
+              #presalesList="cdkDropList"
+              [cdkDropListData]="presales"
+              [cdkDropListConnectedTo]="[proposalList]"
+              (cdkDropListDropped)="drop($event)">
+              <div class="drag-item-box pipeline-card" *ngFor="let item of presales" cdkDrag (cdkDragStarted)="dragStarted($event)"
+              >
+              <div class="drag-item-box-inner">
+                <label>{{item.value}}</label>
+                
+                <button class="btn {{item.btn}}">App Design</button>
+                <p class="company-value">value: ${{item.price}}</p>
+                <span class="last-action">Last Action: 24/08/2020 13:00 HRS</span>
+            </div>
+            <!-- <div class="drag-item-box-inner-action">
+                <a (click)="addTask()"><i aria-hidden="true" class="fa fa-plus"></i></a>
+            </div> -->
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-md-6 p-01">
+            <div
+              id="proposal"
+              class="drag-item-list"
+              cdkDropList
+              #proposalList="cdkDropList"
+              [cdkDropListData]="proposal"              
+              (cdkDropListDropped)="drop($event)">
+              <ng-container *ngFor="let item of proposal">
+              <div class="drag-item-box pipeline-card" [class.pinkbox]="item.alert"  cdkDrag (cdkDragStarted)="dragStarted($event)"
+              >
+              <div class="drag-item-box-inner">
+                <label>{{item.value}}</label>
+                
+                <button class="btn {{item.btn}}">App Design</button>
+                <p class="company-value">value: ${{item.price}}</p>
+                <span class="last-action">Last Action: 24/08/2020 13:00 HRS</span>
+            </div>
+            <!-- <div class="drag-item-box-inner-action">[cdkDropListConnectedTo]="[wonCardBlock,lostCardBlock]"
+                <a (click)="addTask()"><i aria-hidden="true" class="fa fa-plus"></i></a>
+            </div> -->
+              </div>
+            </ng-container>
+            </div>
+          </div>        
+    </div>
+</div>
+
+
+  
